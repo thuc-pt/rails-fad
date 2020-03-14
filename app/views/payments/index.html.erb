@@ -1,0 +1,27 @@
+<div class="container-fluid">
+  <div class="row row-fluid">
+    <div class="col-md-2"><%= render "share/menu_admin" %></div>
+    <div class="col-md-10">
+      <br>
+      <div class="row">
+        <div class="col-md-6">
+          <%= render "share/filter", object: @search, url: payments_path, attributes: :name_cont %>
+        </div>
+        <div class="col-md-6">
+          <%= render "form", object: @payment, url: payments_path %>
+        </div>
+      </div>
+      <% if @payments.present? %>
+        <table class="table">
+          <tr>
+            <th>#</th>
+            <th><%= t ".name" %></th>
+            <th><%= t ".action" %></th>
+          </tr>
+          <%= render @payments %>
+        </table>
+        <%= will_paginate @payments %>
+      <% end %>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,51 @@
+<%= provide :page, t(".page") %>
+<div class="container">
+  <br>
+  <div class="carts">
+    <table class="table">
+      <tr class="text-center">
+        <th>#</th>
+        <th><%= t ".image" %></th>
+        <th><%= t ".name" %></th>
+        <th><%= t ".quantity" %></th>
+        <th><%= t ".price" %></th>
+        <th><%= t ".total" %></th>
+      </tr>
+      <% @order_items.each do |item| %>
+        <tr class="text-center">
+          <td><%= item.id %></td>
+          <td><%= image_tag item.product.image.url, class: "zoom-out-img" %></td>
+          <td><%= item.product.name %></td>
+          <td><%= item.quantity %></td>
+          <td><%= number_to_currency item.price %></td>
+          <td><%= number_to_currency(sum_of_each_item item.quantity, item.price) %></td>
+        </tr>
+      <% end %>
+    </table>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-md-3">
+      <% if current_user.admin? %>
+        <%= button_to t(".transport"), change_status_path(@order), method: :patch,
+          params: {status_id: 2}, class: "btn btn-primary btn-block" if @order.place? %>
+        <%= button_to t(".finishes"), change_status_path(@order), method: :patch,
+          params: {status_id: 3}, class: "btn btn-success btn-block" if @order.transport? %>
+      <% end %>
+    </div>
+    <div class="col-md-6">
+      <div class="total-pay">
+        <h4 class="text-center">
+          <%= t ".order_total" %> <strong><%= number_to_currency @total %></strong>
+        </h4>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <% if current_user.email == @order.email && @order.place? %>
+        <%= link_to t(".cancel"), @order, method: :delete, data: {confirm: t(".confirm")},
+          class: "btn btn-danger btn-block" %>
+        <%= link_to t(".edit"), edit_order_path(@order), class: "btn btn-info btn-block" %>
+      <% end %>
+    </div>
+  </div>
+</div>

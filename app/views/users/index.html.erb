@@ -1,0 +1,34 @@
+<% provide :page, t(".page") %>
+<div class="container-fluid">
+  <div class="row row-fluid">
+    <div class="col-sm-2">
+      <%= render "share/menu_admin" %>
+    </div>
+    <div class="col-md-10">
+      <br>
+      <div class="row">
+        <div class="col-md-8">
+          <%= render "share/filter", object: @search, url: users_path,
+            attributes: :name_or_email_or_phone_cont %>
+        </div>
+        <div class="col-md-4">
+          <%= link_to t(".create"), new_user_path, class: "btn btn-success btn-lg btn-block" %>
+        </div>
+      </div>
+      <% if @users.present? %>
+        <table class="table">
+          <tr>
+            <th>#</th>
+            <th><%= sort_link @search, :name, t(".name") %></th>
+            <th><%= sort_link @search, :email, t(".email") %></th>
+            <th><%= sort_link @search, :gender, t(".gender") %></th>
+            <th><%= sort_link @search, :phone, t(".phone") %></th>
+            <th><%= t ".action" %></th>
+          </tr>
+          <%= render @users %>
+        </table>
+        <%= will_paginate @users %>
+      <% end %>
+    </div>
+  </div>
+</div>

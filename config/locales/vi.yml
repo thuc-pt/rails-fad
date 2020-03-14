@@ -1,0 +1,532 @@
+vi:
+  not_support: Ngôn ngữ không được hỗ trợ
+  base: FAD
+  exception: Không thể truy cập trang
+  not_found: Không tìm thấy đối tượng
+  layouts:
+    header:
+      home: trang chủ
+      product: sản phẩm
+      share: chia sẻ
+      signup: đăng ký
+      signin: đăng nhập
+      account: tài khoản
+    footer:
+      copyright: Khởi tạo bởi Thuc PT vào năm 2019
+  home:
+    index:
+      fruit: trái cây
+      vegetables: rau củ
+      natural: 100% tự nhiên
+      discount: Giảm giá khi đặt mua ngay hôm nay
+      view: xem ngay
+      product: Sản phẩm nổi bật
+      new: mới nhất
+      promotion: khuyến mãi
+      highlight: nổi bật
+  devise:
+    confirmations:
+      new:
+        resend: Gửi lại hướng dẫn xác nhận
+        submit: Xác nhận
+    passwords:
+      new:
+        page: Quên mật khẩu của bạn?
+        submit: Gửi cho tôi hướng dẫn đặt lại mật khẩu
+      edit:
+        page: Thay đổi mật khẩu của bạn
+        submit: Thay đổi
+    registrations:
+      new:
+        page: Đăng ký thành viên
+        character: ký tự tối thiểu
+        submit: Đăng ký
+      edit:
+        page: Chỉnh sửa tài khoản
+        wating: Đang chờ xác nhận
+        character: ký tự tối thiểu
+        submit: Cập nhật
+    sessions:
+      new:
+        page: Đăng nhập hệ thống
+        remember: Lưu tài khoản
+        forgot: Quên mật khẩu?
+        submit: Đăng nhập
+    shared:
+      links:
+        login: Đăng nhập hệ thống
+        signup: Đăng ký tài khoản
+        forgot: Bạn đã quên mật khẩu?
+        confirmation: Xác thực tài khoản
+        unlock: Mở khóa tài khoản
+    unlocks:
+      new:
+        page: Gửi lại hướng dẫn mở khóa
+        submit: Xác nhận
+  users:
+    omniauth_callbacks:
+      facebook:
+        success: Đăng nhập thành công
+        fail: Đăng nhập thất bại
+      google_oauth2:
+        success: Đăng nhập thành công
+        fail: Đăng nhập thất bại
+    new:
+      page: Tạo tài khoản
+      submit: Xác nhận
+    create:
+      success: Đã tạo tài khoản
+    show:
+      not_found: Không tìm thấy người dùng
+    suggests:
+      image: Hình ảnh
+      product_name: Tên sản phẩm
+      description: Mô tả
+      date: Ngày viết
+      action: Hoạt động
+      new: Tạo gợi ý mới
+    orders:
+      name: Tên
+      email: Email
+      address: Địa chỉ
+      phone: Số điện thoại
+      status: Trạng thái
+      action: Hoạt động
+    links:
+      control: Bảng điều khiển
+      update: Hồ sơ
+      password: Tài khoản
+      feedback: Đánh giá
+      order: Đơn đặt hàng
+      share: Chia sẻ
+      signout: Đăng xuất
+      avatar: Thay đổi ảnh đại diện
+      delete: Xóa tài khoản
+      confirm: Bạn chắc chắn không?
+    profile:
+      email: Email
+      gender: Giới tính
+      phone: Số điện thoại
+      address: Địa chỉ
+      male: nam
+      female: nữ
+      manager: Quản lý hệ thống
+      customer: Khách hàng thân thiết
+    edit:
+      page: Cập nhật hồ sơ
+      male: Nam
+      female: Nữ
+      submit: Cập nhật
+      not_found: Không tìm thấy người dùng
+    update:
+      success: Cập nhật hồ sơ thành công
+      fail: Cập nhật hồ sơ thất bại
+      not_found: Không tìm thấy người dùng
+    destroy:
+      success: Đã xóa
+      fail: Không thể xóa
+      not_found: Không tìm thấy người dùng
+    user:
+      male: Nam
+      female: Nữ
+      delete: Xóa
+      confirm: Bạn đã chắc chắn chưa?
+    index:
+      page: Quản lý người dùng
+      create: Tạo người dùng mới
+      name: Tên
+      email: Email
+      gender: Giới tính
+      phone: Số điện thoại
+      action: Hoạt động
+  activerecord:
+    attributes:
+      user:
+        email: Thư điện tử
+        name: Tên
+        password: Mật khẩu
+        password_confirmation: Xác nhận mật khẩu
+        current_password: Mật khẩu hiện tại
+        gender: Giới tính
+        address: Địa chỉ
+        phone: Số điện thoại
+        image: Ảnh đại diện
+        role_id: Quyền truy cập
+      category:
+        name: Tên
+        parent: Thể loại
+      product:
+        name: Tên
+        image: Hình ảnh
+        price: Giá
+        discount: Giảm giá
+        sold_many: Đã bán nhiều
+        description: Mô tả
+        category_id: Thể loại
+        category: Thể loại
+        close_discount_at: Ngày đóng giảm giá
+      order:
+        name: Tên
+        email: Email
+        address: Địa chỉ
+        phone: Số điện thoại
+        payment_id: Phương thức thanh toán
+        status_id: Trạng thái
+      evaluate:
+        content: Nội dung
+      suggest:
+        product_name: Tên sản phẩm
+        description: Mô tả
+        image: Hình ảnh
+    errors:
+      messages:
+        blank: không được để trống
+        invalid: không chính xác
+        too_long: quá dài
+        too_short: quá ngắn
+        confirmation: không đúng
+        taken: đã tồn tại
+        required: không tồn tại
+        not_a_number: không tồn tại
+  change_avatar:
+    update:
+      success: Đã thay đổi ảnh đại diện
+      not_found: Không tìm thấy người dùng
+      not_change: Không thay đổi
+    edit:
+      change_avatar: Đổi ảnh đại diện
+      submit: Xác nhận
+  share:
+    menu_admin:
+      dashboard: Bảng điều khiển
+      user: Người dùng
+      order: Đơn đặt hàng
+      category: Loại hàng hóa
+      product: Sản phẩm
+      payment: Thanh toán
+      suggests: Gợi ý
+      signout: Đăng xuất
+      trash: Thùng rác
+    filter:
+      search_name: tìm kiếm...
+    menu_stores:
+      product: Danh mục sản phẩm
+      food: Đồ ăn
+      drink: Đồ uống
+      all: Tất cả
+      filter: Lọc sản phẩm
+  categories:
+    index:
+      page: Thể loại
+      name: Tên
+      parent: Thể loại
+      action: Hoạt động
+      new: Thể loại mới
+      info: Thông tin
+    category:
+      edit: Sửa
+      delete: Xóa
+      confirm: Bạn đã chắc chắn chưa
+      number: sản phẩm đang sử dụng
+      none: KHÔNG
+    new:
+      page: Thể loại mới
+    form:
+      submit: Lưu lại
+      select: Chọn thể loại cha
+    update:
+      success: Cật nhật thể loại thành công
+      fail: Cập nhật thể loại thất bại
+    create:
+      success: Tạo thể loại thành công
+    edit:
+      page: Sửa thể loại
+    destroy:
+      success: Đã xóa
+      fail: Không thể xóa
+      can't_delete: Không thể xóa danh mục sản phẩm hiện có
+  products:
+    product:
+      restore: Khôi phục
+      delete: Xóa
+      confirm: Bạn chắc chắn không?
+    index:
+      page: Quản lý sản phẩm
+      new: Sản phẩm mới
+      discount: Giảm giá
+      sold_many: Bán nhiều
+      image: Hình ảnh
+      name: Tên
+      category: Thể loại
+      price: Đơn giá
+      after_discount: Sau giảm giá
+      action: Hoạt động
+      limit: Giới hạn mục
+    new:
+      page: Sản phẩm mới
+    form:
+      submit: Lưu lại
+      select: Chọn thể loại
+    edit:
+      page: Sửa sản phẩm
+      not_found: Không tìm thấy sản phẩm
+    create:
+      success: Tạo sản phẩm thành công
+    update:
+      success: Đã cập nhật
+      fail: Cập nhật thất bại
+      not_found: Không tìm thấy sản phẩm
+    destroy:
+      success: Đã đưa vào thùng rác
+      fail: Không thể đưa vào thùng rác
+      not_found: Không tìm thấy sản phẩm
+    show:
+      add: Giỏ hàng
+      recently: Nhận xét gần đây
+      please: Vui lòng đăng nhập để nhận xét
+      signin: Đăng nhập
+      no_comment: Chưa có bình luận ở đây
+      count_rating: lượt đánh giá
+      not_found: Không tìm thấy sản phẩm
+    restore:
+      not_found: Không tìm thấy sản phẩm
+      restored: Đã khôi phục
+      fail: Không thể phục hồi
+    delete:
+      not_found: Không tìm thấy sản phẩm
+      deleted: Đã xóa
+      fail: Không thể xóa
+  number:
+    currency:
+      format:
+        unit: vnd
+        precision: 0
+        delimiter: "."
+        format: "%n %u"
+  admin:
+    index:
+      page: Quản lý
+      category: Số lượng thể loại
+      product: Số lượng sản phẩm
+    links:
+      dashboard: Bảng điều khiển
+      order_by_day: Đơn hàng theo ngày
+      order_by_week: Đơn hàng theo tuần
+      order_by_month: Đơn hàng theo tháng
+      order_by_year: Đơn hàng theo năm
+    orders_by_day:
+      order: Đơn hàng hoàn thành hôm nay
+      revenue: Doanh thu hôm nay
+      count_day: Số đơn hàng hoàn thành mỗi ngày
+      revenue_day: Doanh thu mỗi ngày
+    orders_by_week:
+      order: Đơn hàng hoàn thành tuần này
+      revenue: Doanh thu tuần này
+      count_week: Số đơn hàng hoàn thành mỗi tuần
+      revenue_day: Doanh thu mỗi tuần
+    orders_by_month:
+      order: Đơn hàng hoàn thành tháng này
+      revenue: Doanh thu tháng này
+      count_month: Số đơn hàng hoàn thành mỗi tháng
+      revenue_day: Doanh thu mỗi tháng
+    orders_by_year:
+      order: Đơn hàng hoàn thành năm nay
+      revenue: Doanh thu năm nay
+      count_year: Số đơn hàng hoàn thành mỗi năm
+      revenue_year: Doanh thu mỗi năm
+    other_info:
+      user: Số người dùng đang hoạt động
+      request: Yêu cầu chờ xử lý
+    trash:
+      page: Thùng rác
+      image: Hình ảnh
+      name: Tên
+      category: Thể loại
+      price: Đơn giá
+      discount: Giảm giá
+      after_discount: Sau giảm giá
+      sold_many: Bán nhiều
+      action: Hoạt động
+  stores:
+    filter:
+      name: Tên sản phẩm
+      min: Giá thấp nhất
+      max: Giá cao nhất
+      category: Chọn thể loại
+      highlight: Nổi bật
+      discount: Giảm giá
+      submit: Lọc
+  carts:
+    index:
+      image: Hình ảnh
+      name: Tên sản phẩm
+      quantity: Số lượng
+      price: Đơn giá
+      total: Tổng cộng
+      your_cart: Giỏ hàng của bạn
+      cart_empty: Giỏ hàng rỗng
+      comeback: Quay lại cửa hàng
+      order_total: Tổng đơn hàng của bạn là
+      payout: Tiến hành thanh toán
+      confirm: Bạn chắc chắn không?
+    create:
+      updated:  Đã cập nhật số lượng
+      success: Đã thêm vào giỏ hàng
+      too_much: Số lượng quá nhiều
+      incorrect: Số lượng không chính xác, không thể thêm vào giỏ hàng
+    update_quantity:
+      updated: Đã cập nhật số lượng
+      not_found: Không tìm thấy mục trong giỏ hàng
+      incorrect: Số lượng không chính xác, không thể cập nhật
+    destroy_item:
+      success: Đã xóa
+      not_found: Không tìm thấy mục trong giỏ hàng
+  orders:
+    order:
+      confirm: Bạn chắc chắn không?
+    index:
+      name: Tên
+      email: Email
+      address: Địa chỉ
+      phone: Số điện thoại
+      status: Trạng thái
+      next: Tiếp theo
+      limit: Giới hạn mục
+    show:
+      image: Hình ảnh
+      name: Tên
+      quantity: Số lượng
+      price: Đơn giá
+      total: Tổng
+      can't_view: Không thể xem đơn đặt hàng
+      transport: Vận chuyển đơn hàng
+      finishes: Hoàn thành đơn hàng
+      edit: Chỉnh sửa đơn hàng
+      cancel: Hủy đơn hàng
+    new:
+      page: Đặt hàng
+      new: Xác nhận
+    transports:
+      name: Tên
+      email: Email
+      address: Địa chỉ
+      phone: Số điện thoại
+      status: Trạng thái
+      next: Tiếp theo
+    edit:
+      page: Chỉnh sửa dơn đặt hàng
+      edit: Thay đổi
+      can't: Không thể thay đổi
+    create:
+      success: Cảm ơn bạn đã đặt hàng
+      fail: Không thể đặt hàng
+    places:
+      name: Tên
+      email: Email
+      address: Địa chỉ
+      phone: Số điện thoại
+      status: Trạng thái
+      next: Tiếp theo
+    update:
+      success: Thay đổi thông tin đặt hàng thành công
+      fail: Không thể cập nhật
+      can't: Không thể thay đổi
+    destroy:
+      success: Đã hủy đơn đặt hàng
+      fail: Không thể hủy
+      can't: Không thể hủy đơn đặt hàng
+    finishes:
+      name: Tên
+      email: Email
+      address: Địa chỉ
+      phone: Số điện thoại
+      status: Trạng thái
+    links:
+      all: Tất cả đơn hàng
+      place: Đã đặt hàng
+      transport: Đang vận chuyển
+      finish: Đã hoàn thành
+  payments:
+    index:
+      name: Tên
+      action: Hoạt động
+    payment:
+      delete: Xóa
+      confirm: Bạn chắc chắn không?
+    create:
+      success: Tạo thành công
+      fail: Không thể tạo
+    update:
+      success: Cập nhật thành công
+      fail: Không thể cập nhật
+    destroy:
+      success: Đã xóa
+      fail: Không thể xóa
+  change_status:
+    update:
+      success: Đã chuyển trạng thái
+      fail: Không thể thay đổi
+  evaluates:
+    evaluate:
+      comment: Nhận xét bởi
+      date: vào ngày
+      confirm: Bạn chắc chắn không?
+    new:
+      leave: Để lại nhận xét của bạn ở đây
+      submit: Nhận xét
+    create:
+      success: Đã bình luận
+      fail: Không thể bình luận
+    update:
+      success: Cập nhật thành công
+      fail: Không thể cập nhật
+      not_found: Không tìm thấy đánh giá
+    destroy:
+      success: Đã xóa
+      fail: Không thể xóa
+      not_found: Không tìm thấy đánh giá
+    edit:
+      edit: Sửa nhận xét
+      submit: Lưu lại
+      not_found: Không tìm thấy đánh giá
+  suggests:
+    index:
+      no_share: Chưa có chia sẻ nào
+      new: Gợi ý mới
+    form:
+      name: Tên sản phẩm
+      description: Thêm mô tả
+    new:
+      page: Gợi ý mới
+      new_suggest: Tạo gợi ý
+    edit:
+      page: Chỉnh sửa gợi ý
+      change: Thay đổi
+    suggest:
+      confirm: Bạn chắc chắc không
+    create:
+      success: Tạo gợi ý thành công
+      fail: Không thể tạo
+    update:
+      not_found: Gợi ý không tồn tại
+      success: Đã thay đổi gợi ý
+      fail: Không thể thay đổi gợi ý
+    destroy:
+      not_found: Gợi ý không tồn tại
+      success: Đã xóa gợi ý
+      fail: Không thể xóa gợi ý
+    show:
+      author: Tác giả
+      admin_seen: Quản trị viên đã xem
+      admin_not_seen: Quản trị viên chưa xem
+      seen: Nhấp vào để xem
+      new: Tạo gợi ý mới
+    your_share:
+      confirm: Bạn chắc chắc không?
+    admin_view_new:
+      image: Hình ảnh
+      product_name: Tên sản phẩm
+      date: Ngày viết
+      author: Tác giả
+      seen: Đã xem
+      view: Xem

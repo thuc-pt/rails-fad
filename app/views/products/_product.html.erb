@@ -1,0 +1,28 @@
+<tr class="text-center">
+  <td><%= product_counter + 1 %></td>
+  <td><%= image_tag product.image.url, class: "zoom-out-img" %></td>
+  <td><%= product.name %></td>
+  <td><%= product.category.name %></td>
+  <td><%= number_to_currency product.price %></td>
+  <td><%= display_discount_for product %>%</td>
+  <td><%= number_to_currency(price_for product) %></td>
+  <td><%= product.sold_many %></td>
+  <td>
+    <% if product.deleted? %>
+      <%= link_to t(".restore"), restore_product_path(product), class: "btn btn-success" %>
+      <%= link_to t(".delete"), hard_destroy_product_path(product),
+        data: {confirm: t(".confirm")}, class: "btn btn-danger" %>
+    <% else %>
+      <%= link_to product, class: "btn btn-info" do %>
+        <i class="fa fa-eye"></i>
+      <% end %>
+      <%= link_to edit_product_path(product), class: "btn btn-warning" do %>
+        <i class="fa fa-pen"></i>
+      <% end %>
+      <%= link_to product, method: :delete, data: {confirm: t(".confirm")},
+        class: "btn btn-danger" do %>
+        <i class="fa fa-trash-alt"></i>
+      <% end %>
+    <% end %>
+  </td>
+</tr>

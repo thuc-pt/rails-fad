@@ -1,0 +1,45 @@
+<% provide :page, t(".page") %>
+<div class="container-fluid">
+  <div class="row row-fluid">
+    <div class="col-md-2">
+      <%= render "share/menu_admin" %>
+    </div>
+    <div class="col-md-10">
+      <br>
+      <div class="row">
+        <div class="col-md-2">
+          <%= search_form_for @search do |f| %>
+            <%= select_tag :item, load_limit_items, prompt: t(".limit"), id: "show-limit",
+              class: "form-control form-control-lg" %>
+          <% end %>
+        </div>
+        <br>
+        <div class="col-md-7">
+          <%= render "share/filter", object: @search, url: products_path,
+            attributes: :name_or_category_name_cont %>
+        </div>
+        <div class="col-md-3">
+          <%= link_to t(".new"), new_product_path, class: "btn btn-success btn-block btn-lg" %>
+        </div>
+      </div>
+      <br>
+      <% if @products.present? %>
+        <table class="table">
+          <tr class="text-center">
+            <th><%= sort_link @search, :id, "#" %></th>
+            <th><%= t ".image" %></th>
+            <th><%= sort_link @search, :name, t(".name") %></th>
+            <th><%= sort_link @search, :category_id, t(".category") %></th>
+            <th><%= sort_link @search, :price, t(".price") %></th>
+            <th><%= sort_link @search, :discount, t(".discount") %></th>
+            <th><%= t ".after_discount" %></th>
+            <th><%= sort_link @search, :sold_many, t(".sold_many") %></th>
+            <th><%= t ".action" %></th>
+          </tr>
+          <%= render @products %>
+        </table>
+        <%= will_paginate @products %>
+      <% end %>
+    </div>
+  </div>
+</div>

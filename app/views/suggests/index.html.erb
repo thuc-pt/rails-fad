@@ -1,0 +1,21 @@
+<br>
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
+      <%= render "share/filter", object: @search, url: suggests_path,
+        attributes: :product_name_or_description_or_user_name_cont %>
+    </div>
+    <div class="col-md-4">
+      <%= link_to t(".new"), new_suggest_path, class: "btn btn-success btn-block btn-lg" %>
+    </div>
+  </div>
+  <br>
+  <% if @suggests.any? %>
+    <div class="row">
+      <%= render @suggests %>
+      <%= will_paginate @suggests %>
+    </div>
+  <% else %>
+    <h1><%= t ".no_share" %></h1>
+  <% end %>
+</div>

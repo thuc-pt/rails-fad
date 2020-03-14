@@ -1,0 +1,74 @@
+<% provide :page, @product.name %>
+<br>
+<div class="container">
+  <div class="detail">
+    <div class="row">
+      <div class="col-md-4">
+        <%= image_tag @product.image.url, class: "img-fluid" %>
+        <% if @product.discount.present? %>
+          <div class="discount"><%= display_discount_for @product %>%</div>
+        <% end %>
+      </div>
+      <div class="col-md-4">
+        <h1><%= @product.name %></h1>
+        <% if @product.discount.present? %>
+          <div class="price">
+            <h4><%= number_to_currency(price_for @product) %></h4>
+            <h4><del><%= number_to_currency @product.price %></del></h4>
+          </div>
+        <% else %>
+          <h4><%= number_to_currency @product.price %></h4>
+        <% end %>
+        <br>
+        <%= form_with url: carts_path, local: true do |f| %>
+          <div class="row">
+            <div class="col-md-6">
+              <%= f.number_field :quantity, class: "form-control form-control-lg",
+                value: 1, min: 1, max: 99 %>
+              <%= f.hidden_field :product_id, value: @product.id %>
+            </div>
+            <div class="col-md-6">
+              <%= f.submit t(".add"), class: "btn btn-success btn-lg btn-block" %>
+            </div>
+          </div>
+        <% end %>
+        <br>
+        <div class="rating">
+          <%= render "evaluates/avg_rating", avg: @avg_star %>
+          <h6><%= @count_rating %> <%= t ".count_rating" %></h6>
+        </div>
+        <br>
+        <%= social_share_button_tag %>
+      </div>
+      <div class="col-md-4">
+        <h3><%= t ".description" %></h3>
+        <p class="description"><%= raw @product.description %></p>
+      </div>
+    </div>
+  </div>
+  <div class="evaluate">
+    <% if current_user %>
+      <div id="form-comment">
+        <%= render "evaluates/new" %>
+      </div>
+    <% else %>
+      <h3 class="text-center">
+        <%= t ".please" %> <%= link_to t(".signin"), new_user_session_path,
+          class: "btn btn-success" %>
+      </h3>
+    <% end %>
+  </div>
+  <div class="comment">
+    <% if @evaluates.any? %>
+      <h1><%= t ".recently" %></h1>
+      <br>
+      <div id="load-cmt">
+        <%= render @evaluates %>
+      </div>
+      <%= will_paginate @evaluates %>
+    <% else %>
+      <h1><%= t ".no_comment" %></h1>
+    <% end %>
+  </div>
+  <br>
+</div>
