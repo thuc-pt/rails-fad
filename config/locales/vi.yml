@@ -323,12 +323,12 @@ vi:
       order: Đơn hàng hoàn thành tuần này
       revenue: Doanh thu tuần này
       count_week: Số đơn hàng hoàn thành mỗi tuần
-      revenue_day: Doanh thu mỗi tuần
+      revenue_week: Doanh thu mỗi tuần
     orders_by_month:
       order: Đơn hàng hoàn thành tháng này
       revenue: Doanh thu tháng này
       count_month: Số đơn hàng hoàn thành mỗi tháng
-      revenue_day: Doanh thu mỗi tháng
+      revenue_month: Doanh thu mỗi tháng
     orders_by_year:
       order: Đơn hàng hoàn thành năm nay
       revenue: Doanh thu năm nay

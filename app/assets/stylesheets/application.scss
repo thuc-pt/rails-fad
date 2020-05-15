@@ -207,7 +207,7 @@ label {
 .detail {
   background: $white;
   padding: 1.5rem;
-  box-shadow: 1px 3px 5px 5px rgba(0, 0, 0, 0.4);
+  box-shadow: 1px 3px 5px 5px rgba(0, 0, 0, 0.2);
   input {
     text-align: center;
   }
@@ -328,7 +328,7 @@ label {
   padding: 0.5rem 2rem;
   margin-top: 2rem;
   background: $white;
-  box-shadow: 1px 3px 5px 5px rgba(0, 0, 0, 0.4);
+  box-shadow: 1px 3px 5px 5px rgba(0, 0, 0, 0.2);
   .text-center {
     margin-bottom: 0;
   }
@@ -337,7 +337,7 @@ label {
   padding: 2rem;
   margin-top: 2rem;
   background: $white;
-  box-shadow: 1px 3px 5px 5px rgba(0, 0, 0, 0.4);
+  box-shadow: 1px 3px 5px 5px rgba(0, 0, 0, 0.2);
 }
 .star-box .fa-star {
   color: $rating;

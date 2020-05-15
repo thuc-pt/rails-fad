@@ -297,12 +297,12 @@ en:
       order: Orders completed this week
       revenue: Revenue this week
       count_week: Number of completed orders for each week
-      revenue_day: Revenue every week
+      revenue_week: Revenue every week
     orders_by_month:
       order: Orders completed this month
       revenue: Revenue this month
       count_month: Number of completed orders for each month
-      revenue_day: Revenue every month
+      revenue_month: Revenue every month
     orders_by_year:
       order: Orders completed this year
       revenue: Revenue this year
